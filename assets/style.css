@@ -1,0 +1,82 @@
+/* Elegant & Romantic theme: soft blush, ivory, gold accents */
+:root{
+  --ivory:#fffaf6;
+  --blush:#f6e6e9;
+  --rose:#dba6ab;
+  --gold:#b08a52;
+  --text:#333;
+  --accent:#8b5e5b;
+}
+*{box-sizing:border-box}
+body{font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; color:var(--text); background:var(--ivory);}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:'Playfair Display', serif;font-size:1.6rem;color:var(--accent);text-decoration:none}
+.nav a{margin-left:1rem;text-decoration:none;color:var(--text)}
+.btn-primary{background:var(--gold);color:white;padding:0.5rem 0.9rem;border-radius:8px;text-decoration:none}
+.site-header{background:linear-gradient(180deg, rgba(255,250,248,0.9), rgba(255,250,248,0.8));position:sticky;top:0;z-index:10;border-bottom:1px solid rgba(0,0,0,0.03)}
+.hero{background-image:linear-gradient(180deg, rgba(255,250,248,0.6), rgba(255,250,248,0.8));padding:4rem 0;text-align:center}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.6rem;margin:0 0 1rem;color:var(--accent)}
+.lead{max-width:700px;margin:0 auto 1.5rem;color:#6b5b5b}
+.btn-cta{display:inline-block;background:var(--accent);color:white;padding:0.9rem 1.2rem;border-radius:10px;text-decoration:none}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+.card img{width:100%;height:320px;object-fit:cover;border-radius:12px}
+.features{list-style:disc;margin-left:1.2rem}
+.mini-gallery .gallery-row{display:flex;gap:10px;margin-top:1rem}
+.mini-gallery img{width:32%;height:160px;object-fit:cover;border-radius:8px}
+.page{padding:2rem 0}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.service{background:linear-gradient(180deg,white, var(--blush));padding:1.1rem;border-radius:10px;border:1px solid rgba(0,0,0,0.03)}
+.masonry{column-count:3;column-gap:1rem}
+.masonry img{width:100%;break-inside:avoid;margin-bottom:1rem;border-radius:8px}
+.testimonials blockquote{background:white;padding:1rem;border-radius:8px;margin:1rem 0;border-left:4px solid var(--gold)}
+.contact-form{max-width:700px}
+.contact-form label{display:block;margin-bottom:0.8rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border-radius:6px;border:1px solid #e6dede}
+.site-footer{border-top:1px solid rgba(0,0,0,0.03);padding:1.5rem 0;background:transparent}
+.center{text-align:center}
+.small{font-size:0.9rem;color:#6b5b5b}
+@media (max-width:800px){.grid-2{grid-template-columns:1fr}.masonry{column-count:2}.mini-gallery img{width:100%}}
+@media (max-width:520px){.masonry{column-count:1}.nav{display:none}.nav-toggle{display:block}}
+
+
+/* ========================= assets/script.js ========================= */
+(function(){
+  document.getElementById('year')?.innerText = new Date().getFullYear();
+  document.getElementById('year2')?.innerText = new Date().getFullYear();
+  document.getElementById('year3')?.innerText = new Date().getFullYear();
+  document.getElementById('year4')?.innerText = new Date().getFullYear();
+  document.getElementById('year5')?.innerText = new Date().getFullYear();
+  document.getElementById('year6')?.innerText = new Date().getFullYear();
+
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  if(toggle && nav){
+    toggle.addEventListener('click', ()=>{
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.gap = '12px';
+    });
+  }
+})();
+
+
+/* ========================= README.md ========================= */
+
+# Kiri Decoration — Static Website
+
+## How to use
+1. Create a GitHub account (if you don’t have one) and create a repo named `yourusername.github.io` for a user site OR any repo for a project site.
+2. Upload all files and folders from this project to the repository root.
+3. On GitHub go to Settings → Pages and enable GitHub Pages (branch `main` / `master`). Your site will be served at `https://yourusername.github.io`.
+
+Alternatively, drag-and-drop the site folder to Netlify or Vercel for free hosting.
+
+## Customization
+- Replace image URLs in `gallery.html`, `index.html`, and `about.html` with your own images.
+- Edit contact email in `contact.html`.
+- Change Founder name and copy across pages.
+
+---
+
+<!-- End of project files -->
