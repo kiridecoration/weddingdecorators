@@ -941,6 +941,15 @@ h1:hover, h2:hover, h3:hover {
     position: relative !important;
     overflow: hidden !important;
 }
+/* HERO SLIDESHOW BACKGROUND */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out;
+    min-height: 420px; /* adjust if needed */
+}
 /* ========================= README.md ========================= */
 
 # Kiri Decoration — Static Website
