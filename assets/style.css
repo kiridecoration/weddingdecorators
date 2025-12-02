@@ -18,8 +18,8 @@ body{font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica N
     width: 48px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
+    margin-right: 8px;
+    box-shadow: 0 0 6px rgba(176, 138, 82, 0.35);
 }
 .nav a{margin-left:1rem;text-decoration:none;color:var(--text)}
 .btn-primary{background:var(--gold);color:white;padding:0.5rem 0.9rem;border-radius:8px;text-decoration:none}
