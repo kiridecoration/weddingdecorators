@@ -81,6 +81,30 @@
   </footer>
 
   <script src="assets/script.js"></script>
+  <script>
+  const heroImages = [
+    "assets/img/IMG_20220909_050328.jpg",
+    "assets/img/IMG_20230125_231451.jpg",
+    "assets/img/IMG_20230410_110454.jpg",
+    "assets/img/IMG_20250331_022119-Photoroom.png"
+    "assets/img/IMG_20240511_004545.jpg"
+    "assets/img/IMG_20230928_181350.jpg"
+  ];
+
+  let currentHero = 0;
+  const heroSection = document.querySelector('.hero');
+
+  function changeHeroBackground() {
+    currentHero = (currentHero + 1) % heroImages.length;
+    heroSection.style.backgroundImage = `url(${heroImages[currentHero]})`;
+  }
+
+  // Set initial image
+  heroSection.style.backgroundImage = `url(${heroImages[0]})`;
+
+  // Change image every 5 seconds
+  setInterval(changeHeroBackground, 5000);
+</script>
 </body>
 </html>
 
