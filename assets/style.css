@@ -438,8 +438,78 @@ h1:hover, h2:hover, h3:hover {
     });
   }
 })();
+/* ===================== PREMIUM TESTIMONIALS ===================== */
 
+/* Section background */
+.testimonials-section {
+    background: linear-gradient(180deg, #fdf7f3, #f8ece6);
+    padding: 3rem 0;
+}
 
+/* Title styling */
+.testimonials-section h1,
+.testimonials-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Gold underline */
+.testimonials-section h1::after,
+.testimonials-section h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    display: block;
+    margin: 0.6rem auto 0;
+    border-radius: 3px;
+}
+
+/* Testimonial card */
+.testimonials blockquote {
+    background: white;
+    padding: 1.8rem 2rem;
+    border-radius: 14px;
+    margin: 1.4rem 0;
+    border-left: 5px solid var(--gold);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.testimonials blockquote:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* Testimonial text */
+.testimonials blockquote p {
+    font-size: 1.05rem;
+    line-height: 1.55rem;
+    color: #4e4444;
+}
+
+/* Author name */
+.testimonials blockquote footer {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 0.8rem;
+}
+
+/* Mobile corrections */
+@media (max-width: 600px) {
+    .testimonials blockquote {
+        padding: 1.4rem;
+    }
+    .testimonials-section h1 {
+        font-size: 1.9rem;
+    }
+}
 /* ========================= README.md ========================= */
 
 # Kiri Decoration — Static Website
