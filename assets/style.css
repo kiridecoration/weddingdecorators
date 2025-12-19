@@ -1041,6 +1041,58 @@ section {
   margin-bottom: 1.2rem;
   opacity: 0.7;
 }
+/* =========================================================
+   LUXURY LAYER 3 — CINEMATIC SPOTLIGHT & HERO DEPTH
+   ========================================================= */
+
+/* 🎬 Cinematic hero spotlight */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255,255,255,0.12),
+    rgba(0,0,0,0.65)
+  );
+  pointer-events: none;
+}
+
+/* 🎥 Cinematic slow zoom */
+.hero-bg,
+.hero img {
+  animation: cinematicZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes cinematicZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+
+/* ✨ Luxury spotlight card */
+.spotlight-card {
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,0.96),
+    rgba(240,225,210,0.9)
+  );
+  border-radius: 22px;
+  border: 1px solid rgba(176,138,82,0.35);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 35px 80px rgba(0,0,0,0.28);
+}
 /* ========================= README.md ========================= */
 
 # Kiri Decoration — Static Website
