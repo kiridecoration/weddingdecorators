@@ -1485,6 +1485,68 @@ h3::before {
 * {
   transition: all 0.35s ease !important;
 }
+/* ================= PREMIUM SOCIAL ICONS ================= */
+
+/* Common style for all social icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #b08a52, #e8d3a9);
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(176,138,82,0.35);
+    transition: all 0.35s ease;
+    margin: 0 6px;
+}
+
+/* Hover effect – premium glow */
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(176,138,82,0.45), 0 0 12px rgba(255, 235, 205, 0.5);
+    background: linear-gradient(135deg, #e8d3a9, #b08a52);
+}
+
+/* Instagram specific tweaks */
+.social-icon.instagram {
+    background: linear-gradient(45deg, #b08a52, #d7b079);
+    color: white;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #d7b079, #b08a52);
+    color: white;
+}
+
+/* Facebook specific tweaks */
+.social-icon.facebook {
+    background: linear-gradient(45deg, #b08a52, #d7b079);
+    color: white;
+}
+
+.social-icon.facebook:hover {
+    background: linear-gradient(45deg, #d7b079, #b08a52);
+    color: white;
+}
+
+/* Optional: add soft inner shadow for luxury look */
+.social-icon i {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Responsive scaling */
+@media(max-width:600px) {
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+        margin: 0 4px;
+    }
+}
 /* ========================= README.md ========================= */
 
 # Kiri Decoration — Static Website
