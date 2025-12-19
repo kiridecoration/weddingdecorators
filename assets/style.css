@@ -1247,6 +1247,244 @@ section {
 * {
   transition: all 0.35s ease !important;
 }
+/* =========================================================
+   LEVEL INFINITE + ULTRA LUXURY 2.0 — FINAL ULTIMATE CSS
+   ========================================================= */
+
+/* ================= 1. Ultra-soft radial background texture ================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(255,240,235,0.06), transparent 30%),
+    radial-gradient(circle at 85% 85%, rgba(255,235,200,0.04), transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ================= 2. Hero cinematic glow & spotlight ================= */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), rgba(0,0,0,0.5));
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 14px;
+}
+
+/* ================= 3. Hero shimmer headline effect ================= */
+.hero h1, .hero h2 {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.hero h1::after, .hero h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,235,180,0.45), transparent);
+  transform: skewX(-25deg);
+  animation: heroShimmer 2.2s linear infinite;
+}
+
+@keyframes heroShimmer {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+/* ================= 4. Card glass + floating effect ================= */
+.service-card,
+.spotlight-card,
+.about-content-box,
+.testimonials blockquote {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(176,138,82,0.28);
+  border-radius: 24px;
+  box-shadow:
+    0 28px 68px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.55);
+  transition: transform 0.55s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.55s ease, border-color 0.35s ease;
+}
+
+.service-card:hover,
+.spotlight-card:hover,
+.about-content-box:hover,
+.testimonials blockquote:hover {
+  transform: translateY(-14px) scale(1.04) rotateZ(0.12deg);
+  box-shadow:
+    0 42px 92px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+  border-color: var(--gold);
+}
+
+/* ================= 5. Gallery cinematic hover ================= */
+.gallery-grid img,
+.mini-gallery img {
+  outline: 1px solid rgba(176,138,82,0.25);
+  outline-offset: -6px;
+  transition: transform 0.6s ease, filter 0.6s ease, box-shadow 0.6s ease;
+  border-radius: 14px;
+}
+
+.gallery-grid img:hover,
+.mini-gallery img:hover {
+  transform: scale(1.08) rotateZ(0.15deg);
+  box-shadow: 0 24px 62px rgba(0,0,0,0.28);
+  filter: brightness(1.09);
+}
+
+/* ================= 6. Section pulse effect ================= */
+section {
+  border-radius: 28px;
+  margin: 3rem auto;
+  padding: 4rem 2rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.55),
+    0 22px 70px rgba(0,0,0,0.09);
+  background: linear-gradient(180deg, #fdf7f3, #f7ece5);
+  transition: all 0.5s ease;
+  animation: sectionPulse 14s ease-in-out infinite alternate;
+}
+
+@keyframes sectionPulse {
+  0% { box-shadow: 0 20px 65px rgba(0,0,0,0.08); }
+  50% { box-shadow: 0 26px 82px rgba(0,0,0,0.12); }
+  100% { box-shadow: 0 20px 65px rgba(0,0,0,0.08); }
+}
+
+/* ================= 7. Header navbar glass luxury ================= */
+.site-header,
+header,
+.navbar {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.78);
+  border-bottom: 1px solid rgba(176,138,82,0.25);
+  box-shadow: 0 14px 48px rgba(0,0,0,0.14);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar a,
+.site-header a,
+header a {
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.site-header a:hover,
+header a:hover {
+  color: var(--gold);
+}
+
+/* ================= 8. CTA button float ================= */
+.btn-primary,
+.btn-cta {
+  animation: floatInfinite 6s ease-in-out infinite;
+  box-shadow: 0 12px 28px rgba(176,138,82,0.32);
+}
+
+@keyframes floatInfinite {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* ================= 9. Headings gold shimmer ================= */
+h1, h2, h3 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+h1::before,
+h2::before,
+h3::before {
+  content: "";
+  position: absolute;
+  left: -150%;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,235,180,0.45), transparent);
+  transform: skewX(-25deg);
+  animation: headingShimmer 2.5s linear infinite;
+}
+
+@keyframes headingShimmer {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+/* ================= 10. Footer shimmer ================= */
+.site-footer::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(176,138,82,0.65), transparent);
+  margin-top: 1.2rem;
+  opacity: 0.85;
+  animation: footerShimmer 6s ease-in-out infinite alternate;
+}
+
+@keyframes footerShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ================= 11. Scroll-reveal motion ================= */
+@keyframes fadeUpMotion {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-motion {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpMotion 1.3s ease forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+/* ================= 12. Staggered service-card delays ================= */
+.service-card:nth-child(1) { --delay: 0.1s; }
+.service-card:nth-child(2) { --delay: 0.2s; }
+.service-card:nth-child(3) { --delay: 0.3s; }
+.service-card:nth-child(4) { --delay: 0.4s; }
+.service-card:nth-child(5) { --delay: 0.5s; }
+.service-card:nth-child(6) { --delay: 0.6s; }
+.service-card:nth-child(7) { --delay: 0.7s; }
+.service-card:nth-child(8) { --delay: 0.8s; }
+
+/* ================= 13. Parallax hero float ================= */
+.hero,
+.hero-bg {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+@keyframes parallaxFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+
+.hero-bg {
+  animation: parallaxFloat 12s ease-in-out infinite alternate;
+}
+
+/* ================= 14. Global smooth transition ================= */
+* {
+  transition: all 0.35s ease !important;
+}
 /* ========================= README.md ========================= */
 
 # Kiri Decoration — Static Website
