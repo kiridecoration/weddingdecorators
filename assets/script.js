@@ -36,3 +36,19 @@ luxItems.forEach(el => {
   el.style.transform = 'translateY(30px)';
   luxObserver.observe(el);
 });
+/* =========================================================
+   LUXURY LAYER 3 — HERO TEXT FADE-IN
+   ========================================================= */
+
+window.addEventListener("load", () => {
+  const heroText = document.querySelector(".hero-content");
+  if (heroText) {
+    heroText.style.opacity = 0;
+    heroText.style.transform = "translateY(30px)";
+    setTimeout(() => {
+      heroText.style.transition = "all 1.2s ease";
+      heroText.style.opacity = 1;
+      heroText.style.transform = "translateY(0)";
+    }, 300);
+  }
+});
