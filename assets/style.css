@@ -7,19 +7,19 @@
   --accent: #8b5e5b;
 }
 
-* {
-  box-sizing: border-box;
-  transition: all 0.35s ease;
+* { 
+  box-sizing: border-box; 
+  transition: all 0.35s ease !important; 
 }
 
 body {
-  font-family: Montserrat, system-ui, -apple-system, sans-serif;
+  font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
   margin: 0;
   color: var(--text);
   background: var(--ivory);
 }
 
-/* Subtle luxury background texture */
+/* Ultra-soft radial background texture */
 body::before {
   content: "";
   position: fixed;
@@ -31,7 +31,13 @@ body::before {
   z-index: -1;
 }
 
-/* ================= NAVIGATION & HEADER ================= */
+.container { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 2rem 1rem; 
+}
+
+/* 2. HEADER & NAVIGATION (Glass Luxury) */
 .site-header {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -41,177 +47,312 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 10;
+  animation: slideDown 0.9s ease-out;
 }
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+.header-inner { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 12px; 
 }
 
 .brand-logo {
-  height: 48px;
-  width: 48px;
-  object-fit: cover;
+  height: 48px; 
+  width: 48px; 
+  object-fit: cover; 
   border-radius: 50%;
-  margin-right: 12px;
   box-shadow: 0 0 6px rgba(176, 138, 82, 0.35);
+  display: block;
 }
 
-.brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  color: var(--accent);
-  text-decoration: none;
+.brand { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.6rem; 
+  color: var(--accent); 
+  text-decoration: none; 
 }
 
 .nav a {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.15rem; 
   color: var(--text);
-  margin-left: 1.5rem;
-  text-decoration: none;
-  font-weight: 500;
+  margin-left: 1rem; 
+  text-decoration: none; 
+  padding: 0.3rem 0.6rem; 
+  letter-spacing: 0.6px;
 }
 
-.nav a:hover { color: var(--gold); }
-
-/* ================= TYPOGRAPHY & HEADINGS ================= */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--accent);
-  text-align: center;
-  position: relative;
+.nav a:hover { 
+  color: var(--gold); 
+  transform: translateY(-1px); 
 }
 
-/* The Gold Line under Headings */
-h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(90deg, #b08a52, #e2c58b);
-  margin: 1rem auto 2rem auto;
-  border-radius: 3px;
-}
-
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  min-height: 420px;
-  padding: 6rem 1rem;
-  text-align: center;
-  animation: fadeIn 1.2s ease;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.12), rgba(0,0,0,0.5));
-  z-index: -1;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: var(--accent);
-  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
-}
-
-/* ================= BUTTONS ================= */
+/* 3. BUTTONS */
 .btn-primary, .btn-cta, .send-btn {
-  background: linear-gradient(180deg, #b08a52, #a07742);
-  color: white !important;
-  padding: 0.9rem 1.6rem;
-  border-radius: 12px;
+  background: linear-gradient(180deg, #b08a52, #a07742); 
+  color: white;
+  padding: 0.8rem 1.6rem; 
+  border-radius: 12px; 
   font-weight: bold;
+  border: none; 
+  cursor: pointer; 
+  display: inline-block; 
   text-decoration: none;
-  border: none;
-  cursor: pointer;
-  display: inline-block;
-  box-shadow: 0 10px 28px rgba(176,138,82,0.32);
   animation: floatInfinite 6s ease-in-out infinite;
+  box-shadow: 0 12px 28px rgba(176,138,82,0.32);
 }
 
 .btn-primary:hover, .btn-cta:hover, .send-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(176, 138, 82, 0.45);
+  transform: translateY(-7px); 
+  box-shadow: 0 8px 18px rgba(176, 138, 82, 0.35); 
+  background: #b18443;
 }
 
-/* ================= LAYOUT & CARDS ================= */
-section {
-  max-width: 1200px;
-  margin: 3rem auto;
+/* 4. TYPOGRAPHY & HEADINGS */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; 
+  color: var(--accent); 
+  position: relative;
+  display: inline-block; 
+  overflow: hidden; 
+  margin-bottom: 1.5rem; 
+  text-align: center;
+}
+
+h1:hover, h2:hover, h3:hover { 
+  color: var(--gold); 
+  text-shadow: 0 0 8px rgba(176, 138, 82, 0.4); 
+}
+
+/* Gold Underline for Headings */
+h2::after, .page h1::after, .services-title::after, .gallery-title::after {
+  content: ""; 
+  display: block; 
+  width: 70px; 
+  height: 3px;
+  background: linear-gradient(90deg, #b08a52, #e2c58b);
+  border-radius: 3px; 
+  margin: 8px auto 0;
+}
+
+/* Gold Shimmer Effect */
+h1::before, h2::before, h3::before {
+  content: ""; 
+  position: absolute; 
+  left: -150%; 
+  top: 0; 
+  width: 60%; 
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,235,180,0.45), transparent);
+  transform: skewX(-25deg); 
+  animation: headingShimmer 2.5s linear infinite;
+}
+
+/* 5. HERO SECTION */
+.hero {
+  position: relative; 
+  overflow: hidden; 
+  background-size: cover; 
+  background-position: center;
+  min-height: 420px; 
+  padding: 4rem 0; 
+  text-align: center; 
+  transform: translateZ(0);
+}
+
+.hero::before {
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  z-index: -1; 
+  border-radius: 14px;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), rgba(0,0,0,0.5));
+}
+
+.hero h1 { 
+  font-size: 2.6rem; 
+  margin: 0 0 1rem; 
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15); 
+}
+
+.lead { 
+  max-width: 700px; 
+  margin: 0 auto 1.5rem; 
+  color: #6b5b5b; 
+}
+
+/* 6. SECTIONS & CARDS */
+section, .page {
+  border-radius: 28px; 
+  margin: 3rem auto; 
   padding: 4rem 2rem;
-  border-radius: 28px;
   background: linear-gradient(180deg, #fdf7f3, #f7ece5);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.55), 0 22px 70px rgba(0,0,0,0.09);
+  animation: sectionPulse 14s ease-in-out infinite alternate; 
+  max-width: 1200px;
 }
 
-.services-grid, .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+.services-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 2rem; 
 }
 
-/* Glassmorphism Luxury Cards */
 .service-card, .about-content-box, .testimonials blockquote {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,230,233,0.8));
-  border: 1px solid rgba(176,138,82,0.28);
-  border-radius: 24px;
-  padding: 2rem;
+  background: linear-gradient(180deg, #ffffffaa, #f6e6e9bb);
+  border: 1px solid rgba(176,138,82,0.28); 
+  border-radius: 24px; 
+  padding: 1.8rem;
   box-shadow: 0 28px 68px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.55);
+  transition: transform 0.55s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.55s ease;
 }
 
 .service-card:hover, .about-content-box:hover, .testimonials blockquote:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 42px 92px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.6);
+  transform: translateY(-14px) scale(1.04) rotateZ(0.12deg); 
   border-color: var(--gold);
+  box-shadow: 0 42px 92px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
-/* ================= IMAGES & GALLERY ================= */
+.service-card h3 { 
+  font-size: 1.45rem; 
+  margin-bottom: 0.7rem; 
+}
+
+/* 7. GALLERY */
+.gallery-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1.8rem; 
+}
+
 .gallery-grid img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
+  width: 100%; 
+  height: 260px; 
+  object-fit: cover; 
   border-radius: 14px;
-  outline: 1px solid rgba(176,138,82,0.25);
+  outline: 1px solid rgba(176,138,82,0.25); 
   outline-offset: -6px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 24px 62px rgba(0,0,0,0.28);
+  transform: scale(1.08) rotateZ(0.15deg); 
+  box-shadow: 0 24px 62px rgba(0,0,0,0.28); 
   filter: brightness(1.09);
 }
 
-/* ================= ANIMATIONS ================= */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* 8. FOOTER & SOCIALS */
+.site-footer { 
+  border-top: 1px solid rgba(0,0,0,0.03); 
+  padding: 1.5rem 0; 
+  text-align: center; 
 }
 
-@keyframes floatInfinite {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-7px); }
+.site-footer::after {
+  content: ""; 
+  display: block; 
+  height: 4px; 
+  width: 100%; 
+  margin-top: 1.2rem; 
+  opacity: 0.85;
+  background: linear-gradient(90deg, transparent, rgba(176,138,82,0.65), transparent);
+  animation: footerShimmer 6s ease-in-out infinite alternate;
 }
 
-.reveal-motion {
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
+.social-icon {
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 48px; 
+  height: 48px;
+  border-radius: 50%; 
+  background: linear-gradient(135deg, #b08a52, #e8d3a9); 
+  color: white;
+  margin: 0 6px; 
+  box-shadow: 0 4px 12px rgba(176,138,82,0.35); 
+  text-decoration: none;
 }
 
-/* Delay staggered cards */
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
+.social-icon:hover {
+  transform: translateY(-3px) scale(1.1); 
+  background: linear-gradient(135deg, #e8d3a9, #b08a52);
+  box-shadow: 0 8px 20px rgba(176,138,82,0.45);
+}
+
+/* 9. CONTACT FORM */
+.contact-section label { 
+  display: block; 
+  font-weight: 600; 
+  color: #5a4637; 
+  margin-bottom: 6px; 
+}
+
+.contact-section input, .contact-section textarea {
+  width: 100%; 
+  padding: 14px 16px; 
+  border-radius: 10px; 
+  border: 1px solid rgba(176, 138, 82, 0.4);
+  background: #fff; 
+  margin-bottom: 1rem; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.contact-section input:focus, .contact-section textarea:focus { 
+  border-color: var(--gold); 
+  outline: none; 
+}
+
+/* 10. ANIMATIONS (Only declared ONCE) */
+@keyframes slideDown { 
+  from { opacity: 0; transform: translateY(-20px); } 
+  to { opacity: 1; transform: translateY(0); } 
+}
+
+@keyframes floatInfinite { 
+  0%,100% { transform: translateY(0); } 
+  50% { transform: translateY(-7px); } 
+}
+
+@keyframes headingShimmer { 
+  0% { left: -150%; } 
+  100% { left: 150%; } 
+}
+
+@keyframes sectionPulse { 
+  0% { box-shadow: 0 20px 65px rgba(0,0,0,0.08); } 
+  50% { box-shadow: 0 26px 82px rgba(0,0,0,0.12); } 
+  100% { box-shadow: 0 20px 65px rgba(0,0,0,0.08); } 
+}
+
+@keyframes footerShimmer { 
+  0% { transform: translateX(-100%); } 
+  100% { transform: translateX(100%); } 
+}
+
+/* Reveal Animation */
+.reveal-motion { 
+  opacity: 0; 
+  transform: translateY(30px); 
+  animation: fadeUpMotion 1.3s ease forwards; 
+  animation-delay: var(--delay, 0s); 
+}
+
+@keyframes fadeUpMotion { 
+  0% { opacity: 0; transform: translateY(30px); } 
+  100% { opacity: 1; transform: translateY(0); } 
+}
+
+/* Staggered Delays for Cards */
+.service-card:nth-child(1) { --delay: 0.1s; } 
+.service-card:nth-child(2) { --delay: 0.2s; }
+.service-card:nth-child(3) { --delay: 0.3s; } 
+.service-card:nth-child(4) { --delay: 0.4s; }
+
+/* Mobile */
+@media (max-width: 600px) { 
+  .nav { display: none; } 
+  .social-icon { width: 40px; height: 40px; } 
+}
